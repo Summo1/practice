@@ -1,9 +1,20 @@
-let email = 'apple.pie@example.com';
 
-function maskEmail(email){
+
+function maskEmail(email) {
   let indexOfDomain = email.indexOf("@");
-  let domain = email[indexOfDomain,email.length];
-  return email.index[0] + (indexOfDomain-2)*'*' + email[indexOfDomain-1] + domain
+  let domain = email.slice(indexOfDomain);
+  return (
+    email[0] +
+    "*".repeat(indexOfDomain - 2) +
+    email[indexOfDomain - 1] +
+    domain
+  );
 }
 
-console.log(maskEmail(email))
+
+function main() {
+  let gmail = "apple.pie@example.com";
+  console.log(maskEmail(gmail));
+}
+
+main();
