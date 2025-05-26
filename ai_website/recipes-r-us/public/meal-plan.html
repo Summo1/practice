@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Plan | Recipe's R Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html">Recipe's R Us</a></h1>
+            <p>Plan your affordable weekly meals</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="budget-display-section">
+            <h2>Your Meal Plan</h2>
+            <div class="budget-display">
+                <p>Weekly Budget: <span id="weeklyBudgetDisplay">$0</span></p>
+                <p>Remaining: <span id="remainingBudgetDisplay">$0</span></p>
+            </div>
+        </section>
+
+        <section class="meal-selection">
+            <div class="filter-controls">
+                <div class="form-group">
+                    <label for="mealType">Meal Type:</label>
+                    <select id="mealType">
+                        <option value="all">All Types</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snack">Snack</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="maxCookingTime">Max Cooking Time (mins):</label>
+                    <select id="maxCookingTime">
+                        <option value="0">Any</option>
+                        <option value="15">15 mins</option>
+                        <option value="30">30 mins</option>
+                        <option value="45">45 mins</option>
+                        <option value="60">60 mins</option>
+                    </select>
+                </div>
+                <button id="applyFilters" class="btn-secondary">Apply Filters</button>
+            </div>
+
+            <div class="meal-plan-grid">
+                <div class="day-column" id="monday">
+                    <h3>Monday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="tuesday">
+                    <h3>Tuesday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="wednesday">
+                    <h3>Wednesday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="thursday">
+                    <h3>Thursday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="friday">
+                    <h3>Friday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="saturday">
+                    <h3>Saturday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+                <div class="day-column" id="sunday">
+                    <h3>Sunday</h3>
+                    <div class="meal-slots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="available-meals">
+            <h2>Available Meals</h2>
+            <div id="mealResults" class="meal-results-grid">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </section>
+
+        <div class="actions">
+            <a href="index.html" class="btn-primary">Save & Return Home</a>
+            <a href="cart.html" class="btn-secondary">View Shopping Cart</a>
+        </div>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalRecipeName"></h2>
+            <div class="recipe-meta">
+                <span id="modalRecipeCost"></span>
+                <span id="modalRecipeTime"></span>
+                <span id="modalRecipeServings"></span>
+            </div>
+            
+            <div class="recipe-details">
+                <div class="ingredients-section">
+                    <h3>Ingredients</h3>
+                    <ul id="modalRecipeIngredients"></ul>
+                    <button id="addAllToCart" class="btn-primary">Add All to Cart</button>
+                </div>
+                <div class="instructions-section">
+                    <h3>Instructions</h3>
+                    <ol id="modalRecipeInstructions"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/meal-plan.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe's R Us | Affordable Weekly Meal Planning</title>
+    <meta name="description" content="Plan your weekly meals on a budget with Recipe's R Us">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Recipe's R Us</h1>
+            <p>Affordable, easy meals for your week</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="budget-section">
+            <h2>Set Your Weekly Budget</h2>
+            <form id="budgetForm">
+                <div class="form-group">
+                    <label for="weeklyBudget">Enter your weekly food budget (AUD):</label>
+                    <input type="number" id="weeklyBudget" min="0" step="5" required>
+                </div>
+                <button type="submit" class="btn-primary">Start Planning</button>
+            </form>
+        </section>
+
+        <section class="current-plan-section hidden">
+            <h2>Your Weekly Meal Plan</h2>
+            <div class="budget-display">
+                <p>Weekly Budget: <span id="displayBudget">$0</span></p>
+                <p>Remaining: <span id="remainingBudget">$0</span></p>
+            </div>
+            <div id="mealPlanPreview" class="meal-plan-preview">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+            <div class="actions">
+                <a href="meal-plan.html" class="btn-primary">Edit Meal Plan</a>
+                <a href="cart.html" class="btn-secondary">View Shopping Cart</a>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Set your weekly food budget</li>
+                <li>Select meals for your week</li>
+                <li>Add ingredients to your shopping cart</li>
+                <li>See where to get the best prices</li>
+                <li>Cook delicious, affordable meals all week!</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Recipe's R Us. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

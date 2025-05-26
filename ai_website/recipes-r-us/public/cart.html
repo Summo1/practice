@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Recipe's R Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html">Recipe's R Us</a></h1>
+            <p>Your affordable shopping list</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="cart-summary">
+            <h2>Your Shopping Cart</h2>
+            <div class="budget-display">
+                <p>Weekly Budget: <span id="cartBudgetDisplay">$0</span></p>
+                <p>Total Cost: <span id="cartTotalCost">$0</span></p>
+                <p>Remaining: <span id="cartRemainingBudget">$0</span></p>
+            </div>
+        </section>
+
+        <section class="location-selection">
+            <div class="form-group">
+                <label for="userPostcode">Enter your postcode for local prices:</label>
+                <input type="text" id="userPostcode" pattern="[0-9]{4}" maxlength="4" placeholder="e.g. 3000">
+                <button id="findLocalPrices" class="btn-secondary">Find Local Prices</button>
+            </div>
+        </section>
+
+        <section class="cart-items">
+            <h3>Ingredients List</h3>
+            <div id="cartItemsList">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </section>
+
+        <section class="store-comparison hidden" id="storeComparison">
+            <h3>Best Prices Near You</h3>
+            <div class="store-tabs">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+            <div class="store-items">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </section>
+
+        <div class="actions">
+            <a href="meal-plan.html" class="btn-secondary">Back to Meal Plan</a>
+            <a href="index.html" class="btn-primary">Return Home</a>
+        </div>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
